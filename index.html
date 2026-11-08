@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TikTok Quality Uploader</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;color:#16171a}a{color:#0a7c86}h1{font-size:1.6rem}code{background:#f0f1f4;padding:.1em .3em;border-radius:4px}nav a{margin-right:1rem}</style></head><body>
+<nav><a href="./">Home</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+<h1>TikTok Quality Uploader</h1>
+<p>A Chromium browser extension that uploads a video file to the user's own TikTok inbox through TikTok's official Content Posting API, sending the original file unchanged (no re-encoding or compression).</p>
+<h2>How it works</h2>
+<ol>
+<li>The user connects their TikTok account with TikTok Login Kit (desktop flow with PKCE) and grants the <code>video.upload</code> permission.</li>
+<li>The user selects a video file. The extension analyses it locally and computes a SHA-256 checksum.</li>
+<li>The file is sent to TikTok in chunks using the official upload endpoint. Each chunk is verified against the checksum before it is sent.</li>
+<li>The video appears as a draft in the user's TikTok inbox; the user finishes and publishes the post inside the TikTok app.</li>
+</ol>
+<p>This project is independent and is not affiliated with or endorsed by TikTok.</p>
+<p><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></p>
+</body></html>
